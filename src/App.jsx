@@ -7,7 +7,8 @@ function App() {
 
   return (
     <div className="bg-dark text-white">
-      <h1 className='text-center display-1'>RICK AND MORTY</h1>
+      <h1 className='text-center display-1 p-5 mb-5'>RICK AND MORTY</h1>
+      <hr />
       <CharacterList></CharacterList>
     </div>
   )

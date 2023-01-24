@@ -6,7 +6,7 @@ import Character from './Character';
 function NavPage (props)  {
     
     return (
-        <header className='d-flex justify-content-between align-items-center'>
+        <header className='d-flex justify-content-between align-items-center mb-5'>
             <button 
                 className='btn btn-primary'
                 onClick={() => props.setPage(props.page - 1)}
@@ -32,6 +32,9 @@ const CharacterList = () => {
     useEffect(() => {
         fetchData();
         setLoading(false)
+        if(page === 0){
+            setPage(1)
+        }
     }, [page])
     
     async function fetchData () {
@@ -43,7 +46,7 @@ const CharacterList = () => {
     
 
     return (
-        <div className='container'>
+        <div className='container mt-5'>
             <NavPage page={page} setPage={setPage}></NavPage>
 
            {
